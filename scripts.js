@@ -1,66 +1,67 @@
-// ******************************* 
-// COMECE AQUI SE DESEJA UM PONTO DE INÍCIO MAIS FÁCIL PARA ESTA ATRIBUIÇÃO
+// *******************************
+// START HERE IF YOU WANT A MORE CHALLENGING STARTING POINT FOR THIS ASSIGNMENT
 // *******************************
 //
-// Módulo 4 Instruções de atribuição.
+// Module 4 Assignment Instructions.
 //
-// A ideia desta tarefa é usar uma matriz de nomes existente
-// e, em seguida, envie Hello 'Name' ou Good Bye 'Name' para o console.
-// O programa deve dizer "Olá" para qualquer nome, exceto nomes que começam com um "J"
-// ou "j", caso contrário, o programa deve dizer "adeus". Então, a saída final
-// no console deve ficar assim:
-/ *
+// The idea of this assignment is to take an existing array of names
+// and then output either Hello 'Name' or Good Bye 'Name' to the console.
+// The program should say "Hello" to any name except names that start with a "J"
+// or "j", otherwise, the program should say "Good Bye". So, the final output
+// on the console should look like this:
+/*
 Hello Yaakov
-Adeus John
-Adeus Jen
-Adeus Jason
-Olá paul
-Olá Frank
-Olá Larry
-Olá Paula
-Olá Laura
-Adeus Jim
-ATENÇÃO!!! ATENÇÃO!!!
-O código NÃO funciona atualmente! É SEU trabalho fazê-lo funcionar
-conforme descrito nos requisitos e nas etapas para concluir esta
-tarefa.
-ATENÇÃO!!! ATENÇÃO!!!
-* /
+Good Bye John
+Good Bye Jen
+Good Bye Jason
+Hello Paul
+Hello Frank
+Hello Larry
+Hello Paula
+Hello Laura
+Good Bye Jim
 
-// ETAPA 1: (NADA A FAZER. JÁ FEITO POR VOCÊ)
-// Envolve todo o conteúdo do script.js dentro de um IIFE
-// Ver aula 52, parte 2
-// (Observe, a etapa 2 será realizada no arquivo SpeakHello.js.)
-( function  ( )  {
+WARNING!!! WARNING!!!
+The code does NOT currently work! It is YOUR job to make it work
+as described in the requirements and the steps in order to complete this
+assignment.
+WARNING!!! WARNING!!!
 
-var  names  =  [ "Yaakov" ,  "John" ,  "Jen" ,  "Jason" ,  "Paul" ,  "Frank" ,  "Larry" ,  "Paula" ,  "Laura" ,  "Jim" ] ;
+*/
 
-// ETAPA 10: (NADA A FAZER. JÁ FEITO POR VOCÊ)
-// Faça um loop sobre a matriz de nomes e diga 'Olá' ou "Adeus"
-// usando o método 'speak' ou o helloSpeaker's ou byeSpeaker's
-// método 'speak'.
-// Ver palestra 50, parte 1
-para  ( var  i  =  0 ;  i  <  nomes . comprimento ;  i ++ )  {
+// STEP 1:
+// Wrap the entire contents of script.js inside of an IIFE
+// See Lecture 52, part 2
+// (Note, Step 2 will be done in the SpeakHello.js file.)
 
-  // ETAPA 11: (NADA A FAZER. JÁ FEITO POR VOCÊ)
-  // Recupera a primeira letra do nome atual no loop.
-  // Use a função 'charAt' do objeto string. Desde que estamos procurando
-  // nomes que começam com maiúsculas ou minúsculas 'J' / 'j', chamam
-  // método 'toLowerCase' do objeto string no resultado, para que possamos comparar
-  // para minúsculas 'j' depois.
-  // Procure esses métodos no site da Mozilla Developer Network, se necessário.
-  var  firstLetter  =  nomes [ i ] . charAt ( 0 ) . toLowerCase ( ) ;
+var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
 
-  // ETAPA 12: (NADA A FAZER. JÁ FEITO POR VOCÊ)
-  // Compare o 'firstLetter' recuperado no PASSO 11 com letras minúsculas
-  // 'j'. Se for o mesmo, chame o método 'speak' do byeSpeaker com o nome atual
-  // no loop. Caso contrário, chame o método 'speak' do helloSpeaker com o atual
-  // nome no loop.
-  if  ( firstLetter  ===  'j' )  {
-    byeSpeaker . falar ( nomes [ i ] ) ;
-  }  mais  {
-    helloSpeaker . falar ( nomes [ i ] ) ;
+// STEP 10:
+// Loop over the names array and say either 'Hello' or "Good Bye"
+// using the 'speak' method or either helloSpeaker's or byeSpeaker's
+// 'speak' method.
+// See Lecture 50, part 1
+/* fill in parts of the 'for' loop to loop over names array */
+for (var index in names) {
+
+  // STEP 11:
+  // Retrieve the first letter of the current name in the loop.
+  // Use the string object's 'charAt' function. Since we are looking for
+  // names that start with either upper case or lower case 'J'/'j', call
+  // string object's 'toLowerCase' method on the result so we can compare
+  // to lower case character 'j' afterwards.
+  // Look up these methods on Mozilla Developer Network web site if needed.
+  var firstLetter = names[index].charAt(0);
+
+  // STEP 12:
+  // Compare the 'firstLetter' retrieved in STEP 11 to lower case
+  // 'j'. If the same, call byeSpeaker's 'speak' method with the current name
+  // in the loop. Otherwise, call helloSpeaker's 'speak' method with the current
+  // name in the loop.
+  /* fill in condition here */
+  if (firstLetter.toLowerCase() === 'j') {
+      byeSpeaker.speak(names[index])
+  } else {
+      helloSpeaker.speak(names[index]);
   }
 }
-
-} ) ( ) ;
